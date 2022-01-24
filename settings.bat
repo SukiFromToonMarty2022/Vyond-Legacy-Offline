@@ -1,4 +1,4 @@
-title Wrapper: Offline Settings Script
+title Vyond Legacy Offline Settings Script
 :: Interactive config.bat changer
 :: Author: benson#0411
 :: License: MIT
@@ -13,10 +13,10 @@ SETLOCAL ENABLEDELAYEDEXPANSION
 pushd "%~dp0"
 if !errorlevel! NEQ 0 goto error_location
 if not exist utilities\config.bat ( goto error_location )
-if not exist start_wrapper.bat ( goto error_location )
+if not exist start_vyond.bat ( goto error_location )
 goto noerror_location
 :error_location
-echo Doesn't seem like this script is in the Wrapper: Offline folder.
+echo Doesn't seem like this script is in the Vyond Legacy Offline folder.
 goto end
 :noerror_location
 
@@ -283,7 +283,7 @@ if "!choice!"=="?8" (
 :: Cepstral
 if "!choice!"=="9" goto cepstralchange
 if "!choice!"=="?9" (
-	echo By default, Wrapper: Offline uses the included VFProxy
+	echo By default, Vyond Legacy Offline uses the included VFProxy
 	echo for the VoiceForge voices, as VoiceForge was turned
 	echo into a mobile app, causing the original API to be
 	echo deleted. Someone managed to hack the APK and find the
@@ -314,7 +314,7 @@ if "!choice!"=="?10" (
 if exist "server\characters\characters.zip" (
 	if "!choice!"=="11" goto extractchars
 	if "!choice!"=="?11" (
-		echo When first getting Wrapper: Offline, all non-stock characters are put into a single zip file.
+		echo When first getting Vyond Legacy Offline, all non-stock characters are put into a single zip file.
 		echo This is because if they're all separate, extracting takes forever and is incredibly annoying.
 		echo If you wish to import characters made on the LVM when it was still up and hosted by Vyond,
 		echo you can extract them here. They will still be compressed, just in separate files to be usable.
