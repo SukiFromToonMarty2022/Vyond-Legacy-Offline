@@ -1,9 +1,9 @@
-:: Wrapper: Offline Launcher
-:: Author: benson#0411
+:: Vyond Legacy Offline Launcher
+:: Author: Fanimation36#1811
 :: License: MIT
-set WRAPPER_VER=1.2.3
-set WRAPPER_BLD=72
-title Wrapper: Offline v%WRAPPER_VER% ^(build %WRAPPER_BLD%^) [Initializing...]
+set WRAPPER_VER=1.2.8
+set WRAPPER_BLD=3
+title Vyond Legacy Offline v%WRAPPER_VER% ^(build %WRAPPER_BLD%^) [Initializing...]
 
 ::::::::::::::::::::
 :: Initialization ::
@@ -46,7 +46,7 @@ if not exist wrapper ( goto error_location )
 if not exist server ( goto error_location )
 goto noerror_location
 :error_location
-echo Doesn't seem like this script is in a Wrapper: Offline folder.
+echo Doesn't seem like this script is in a Vyond Legacy Offline folder.
 pause && exit
 :noerror_location
 
@@ -71,8 +71,8 @@ if not exist server ( goto error_location )
 if not exist "utilities\checks" md utilities\checks
 
 :: Welcome, Director Ford!
-echo Wrapper: Offline
-echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
+echo Vyond Legacy Offline
+echo A project from Fanimation36 adapted by Joseph Animate 2021 
 echo Version !WRAPPER_VER!, build !WRAPPER_BLD!
 echo:
 
@@ -110,7 +110,7 @@ if !VERBOSEWRAPPER!==n (
 	echo:
 )
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Checking dependencies...]
+title Vyond Legacy Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Checking dependencies...]
 
 :: Preload variables
 set NEEDTHEDEPENDERS=n
@@ -283,7 +283,7 @@ if !NEEDTHEDEPENDERS!==y (
 	goto skip_dependency_install
 )
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Installing dependencies...]
+title Vyond Legacy Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Installing dependencies...]
 
 :: Preload variables
 set INSTALL_FLAGS=ALLUSERS=1 /norestart
@@ -296,7 +296,7 @@ if /i "!processor_architecture!"=="AMD64" set CPU_ARCHITECTURE=64
 if /i "!PROCESSOR_ARCHITEW6432!"=="AMD64" set CPU_ARCHITECTURE=64
 
 :: Check for admin if installing Flash or Node.js
-:: Skipped in Safe Mode, just in case anyone is running Wrapper in safe mode... for some reason
+:: Skipped in Safe Mode, just in case anyone is running Vyond in safe mode... for some reason
 :: and also because that was just there in the code i used for this and i was like "eh screw it why remove it"
 if !ADMINREQUIRED!==y (
 	if !VERBOSEWRAPPER!==y ( echo Checking for Administrator rights... && echo:)
@@ -310,17 +310,17 @@ if !ADMINREQUIRED!==y (
 			echo:
 			if !FLASH_DETECTED!==n (
 				if !NODEJS_DETECTED!==n (
-					echo Wrapper: Offline needs to install Flash and Node.js.
+					echo Vyond Legacy Offline needs to install Flash and Node.js.
 				) else (
-					echo Wrapper: Offline needs to install Flash.
+					echo Vyond Legacy Offline needs to install Flash.
 				)
 			) else (
-				echo Wrapper: Offline needs to install Node.js.
+				echo Vyond Legacy Offline needs to install Node.js.
 			)
 			echo To do this, it must be started with Admin rights.
 			echo:
 			echo Close this window and re-open Wrapper: Offline as an Admin.
-			echo ^(right-click start_wrapper.bat and click "Run as Administrator"^)
+			echo ^(right-click start_vyond.bat and click "Run as Administrator"^)
 			echo:
 			if !DRYRUN!==y (
 				echo ...yep, dry run is going great so far, let's skip the exit
@@ -345,7 +345,7 @@ if !FLASH_DETECTED!==n (
 		echo What web browser do you use? If it isn't here,
 		echo look up whether it's based on Chromium or Firefox.
 		echo If it's not based on either, then
-		echo Wrapper: Offline will not be able to install Flash.
+		echo Vyond Legacy Offline will not be able to install Flash.
 		echo Unless you know what you're doing and have a
 		echo version of Flash made for your browser, please
 		echo install a Chrome or Firefox based browser.
@@ -379,7 +379,7 @@ if !FLASH_DETECTED!==n (
 	)
 
 	:escape_browser_ask
-	echo To install Flash Player, Wrapper: Offline must kill any currently running web browsers.
+	echo To install Flash Player, Vyond Legacy Offline must kill any currently running web browsers.
 	echo Please make sure any work in your browser is saved before proceeding.
 	echo Wrapper: Offline will not continue installation until you press a key.
 	echo:
@@ -408,7 +408,7 @@ if !FLASH_DETECTED!==n (
 		echo Starting Flash for Chrome installer...
 		if not exist "utilities\installers\flash_windows_chromium.msi" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
-			echo A normal copy of Wrapper: Offline should come with one.
+			echo A normal copy of Vyond Legacy Offline should come with one.
 			echo You may be able to find a copy on this website:
 			echo https://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html
 			echo Although Flash is needed, Offline will continue launching.
@@ -420,7 +420,7 @@ if !FLASH_DETECTED!==n (
 		echo Starting Flash for Firefox installer...
 		if not exist "utilities\installers\flash_windows_firefox.msi" (
 			echo ...erm. Bit of an issue there actually. The installer doesn't exist.
-			echo A normal copy of Wrapper: Offline should come with one.
+			echo A normal copy of Vyond Legacy Offline should come with one.
 			echo You may be able to find a copy on this website:
 			echo https://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html
 			echo Although Flash is needed, Offline will try to install anything else it can.
@@ -444,7 +444,7 @@ if !NODEJS_DETECTED!==n (
 		if !VERBOSEWRAPPER!==y ( echo 64-bit system detected, installing 64-bit Node.js. )
 		if not exist "utilities\installers\node_windows_x64.msi" (
 			echo We have a problem. The 64-bit Node.js installer doesn't exist.
-			echo A normal copy of Wrapper: Offline should come with one.
+			echo A normal copy of Vyond Legacy Offline should come with one.
 			echo You should be able to find a copy on this website:
 			echo https://nodejs.org/en/download/
 			echo Although Node.js is needed, Offline will try to install anything else it can.
@@ -452,7 +452,7 @@ if !NODEJS_DETECTED!==n (
 			goto after_nodejs_install
 		)
 		echo Proper Node.js installation doesn't seem possible to do automatically.
-		echo You can just keep clicking next until it finishes, and Wrapper: Offline will continue once it closes.
+		echo You can just keep clicking next until it finishes, and Vyond Legacy Offline will continue once it closes.
 		if !DRYRUN!==n ( msiexec /i "utilities\installers\node_windows_x64.msi" !INSTALL_FLAGS! )
 		goto nodejs_installed
 	)
@@ -460,7 +460,7 @@ if !NODEJS_DETECTED!==n (
 		if !VERBOSEWRAPPER!==y ( echo 32-bit system detected, installing 32-bit Node.js. )
 		if not exist "utilities\installers\node_windows_x32.msi" (
 			echo We have a problem. The 32-bit Node.js installer doesn't exist.
-			echo A normal copy of Wrapper: Offline should come with one.
+			echo A normal copy of Vyond Legacy Offline should come with one.
 			echo You should be able to find a copy on this website:
 			echo https://nodejs.org/en/download/
 			echo Although Node.js is needed, Offline will try to install anything else it can.
@@ -523,7 +523,7 @@ if !HTTPSERVER_DETECTED!==n (
 			echo:
 			if not exist "utilities\installers\http-server-master" (
 				echo Well, we'd try that if the files existed.
-				echo A normal copy of Wrapper: Offline should come with them.
+				echo A normal copy of Vyond Legacy Offline should come with them.
 				echo You should be able to find a copy on this website:
 				echo https://www.npmjs.com/package/http-server
 				echo Although http-server is needed, Offline will try to install anything else it can.
@@ -572,8 +572,8 @@ if !HTTPSCERT_DETECTED!==n (
 	echo:
 	if not exist "server\the.crt" (
 		echo ...except it doesn't exist for some reason.
-		echo Wrapper: Offline requires this to run.
-		echo You should get a "the.crt" file from someone else, or redownload Wrapper: Offline.
+		echo Vyond Legacy Offline requires this to run.
+		echo You should get a "the.crt" file from someone else, or redownload Vyond Legacy Offline.
 		echo Offline has nothing left to do since it can't launch without the.crt, so it will close.
 		pause
 		exit
@@ -583,9 +583,9 @@ if !HTTPSCERT_DETECTED!==n (
 		fsutil dirty query !systemdrive! >NUL 2>&1
 		if /i not !ERRORLEVEL!==0 (
 			if !VERBOSEWRAPPER!==n ( cls )
-			echo For Wrapper: Offline to work, it needs an HTTPS certificate to be installed.
-			echo If you have administrator privileges, you should reopen start_wrapper.bat as Admin.
-			echo ^(do this by right-clicking start_wrapper.bat and click "Run as Administrator"^)
+			echo For Vyond Legacy Offline to work, it needs an HTTPS certificate to be installed.
+			echo If you have administrator privileges, you should reopen start_vyond.bat as Admin.
+			echo ^(do this by right-clicking start_vyond.bat and click "Run as Administrator"^)
 			echo:
 			echo If you can't do that, there's another method, but it's less reliable and is done per-browser.
 			echo: 
@@ -638,18 +638,18 @@ if !HTTPSCERT_DETECTED!==n (
 )
 :after_cert_install
 
-:: Alert user to restart Wrapper without running as Admin
+:: Alert user to restart Vyond without running as Admin
 if !ADMINREQUIRED!==y (
 	color 20
 	if !VERBOSEWRAPPER!==n ( cls )
 	echo:
 	echo Dependencies needing Admin now installed^^!
 	echo:
-	echo Wrapper: Offline no longer needs Admin rights,
+	echo Vyond Legacy Offline no longer needs Admin rights,
 	echo please restart normally by double-clicking.
 	echo:
 	echo If you saw this from running normally,
-	echo Wrapper: Offline should continue normally after a restart.
+	echo Vyond Legacy Offline should continue normally after a restart.
 	echo:
 	if !DRYRUN!==y (
 		echo ...you enjoying the dry run experience? Skipping closing.
@@ -670,7 +670,7 @@ echo:
 :: Starting Wrapper ::
 ::::::::::::::::::::::
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Loading...]
+title Vyond Legacy Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Loading...]
 
 :: Close existing node apps
 :: Hopefully fixes EADDRINUSE errors??
@@ -726,15 +726,15 @@ PING -n 6 127.0.0.1>nul
 :: Open Wrapper in preferred browser
 if !INCLUDEDCHROMIUM!==n (
 	if !CUSTOMBROWSER!==n (
-		echo Opening Wrapper: Offline in your default browser...
+		echo Opening Vyond Legacy Offline in your default browser...
 		if !DRYRUN!==n ( start http://localhost:4343 )
 	) else (
-		echo Opening Wrapper: Offline in your set browser...
+		echo Opening Vyond Legacy Offline in your set browser...
 		echo If this does not work, you may have set the path wrong.
 		if !DRYRUN!==n ( start !CUSTOMBROWSER! http://localhost:4343 )
 	)
 ) else (
-	echo Opening Wrapper: Offline using included Chromium...
+	echo Opening Vyond Legacy Offline using included Chromium...
 	pushd utilities\ungoogled-chromium
 	if !APPCHROMIUM!==y (
 		if !DRYRUN!==n ( start chrome.exe --allow-outdated-plugins --user-data-dir=the_profile --app=http://localhost:4343 )
@@ -744,7 +744,7 @@ if !INCLUDEDCHROMIUM!==n (
 	popd
 )
 
-echo Wrapper: Offline has been started^^! The video list should now be open.
+echo Vyond Legacy Offline has been started^^! The video list should now be open.
 
 ::::::::::::::::
 :: Post-Start ::
@@ -757,8 +757,8 @@ cls
 :wrapperstarted
 
 echo:
-echo Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) running
-echo A project from VisualPlugin adapted by GoTest334 and the Wrapper: Offline team
+echo Vyond Legacy Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) running
+echo A project from Fanimation36 adapted by Joseph Animate 2021
 echo:
 if !VERBOSEWRAPPER!==n ( echo DON'T CLOSE THIS WINDOW^^! Use the quit option ^(0^) when you're done. )
 if !VERBOSEWRAPPER!==y ( echo Verbose mode is on, see the two extra CMD windows for extra output. )
@@ -801,7 +801,7 @@ if /i "!choice!"=="patch" goto patchtime
 if /i "!choice!"=="random" goto sayarandom
 if /i "!choice!"=="narutofan420" echo i am narutofan420 i am a naruto fan i watch naruto i watched all 3 series and still watch it & goto wrapperidle
 if /i "!choice!"=="die" echo die please & goto wrapperidle
-if /i "!choice!"=="aaron doan" echo YOU^^!^^!^^! Noo Wrapper Is Patched Forever^^!^^!^^! Cries And Hits You So Many Times & goto wrapperidle
+if /i "!choice!"=="aaron doan" echo YOU^^!^^!^^! Noo Vyond Is Patched Forever^^!^^!^^! Cries And Hits You So Many Times & goto wrapperidle
 if /i "!choice!"=="spark" echo WHY DID SOMEONE FUCK UP THE LAUNCHER? & goto wrapperidle
 :: dev options
 if /i "!choice!"=="amnesia" goto wipe_save
@@ -812,14 +812,14 @@ echo Time to choose. && goto wrapperidle
 :reopen_webpage
 if !INCLUDEDCHROMIUM!==n (
 	if !CUSTOMBROWSER!==n (
-		echo Opening Wrapper: Offline in your default browser...
+		echo Opening Vyond Legacy Offline in your default browser...
 		start http://localhost:4343
 	) else (
-		echo Opening Wrapper: Offline in your set browser...
+		echo Opening Vyond Legacy Offline in your set browser...
 		start !CUSTOMBROWSER! http://localhost:4343 >nul
 	)
 ) else (
-	echo Opening Wrapper: Offline using included Chromium...
+	echo Opening Vyond Legacy Offline using included Chromium...
 	pushd utilities\ungoogled-chromium
 	if !APPCHROMIUM!==y (
 		start chrome.exe --allow-outdated-plugins --user-data-dir=the_profile --app=http://localhost:4343 >nul
@@ -862,7 +862,7 @@ goto wrapperidle
 echo Opening the importer...
 call utilities\import.bat
 cls
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^)
+title Vyond Legacy Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^)
 set JUSTIMPORTED=y
 goto wrapperstartedcls
 
@@ -994,7 +994,7 @@ goto wrapperidle
 :: Confirmation before shutting down
 :exitwrapperconfirm
 echo:
-echo Are you sure you want to quit Wrapper: Offline?
+echo Are you sure you want to quit Vyond Legacy Offline?
 echo Be sure to save all your work.
 echo Type Y to quit, and N to go back.
 :exitwrapperretry
@@ -1009,7 +1009,7 @@ echo You must answer Yes or No. && goto exitwrapperretry
 
 :point_extraction
 
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Shutting down...]
+title Vyond Legacy Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Shutting down...]
 
 :: Shut down Node.js, PHP and http-server
 if !VERBOSEWRAPPER!==y (
@@ -1022,19 +1022,19 @@ if !VERBOSEWRAPPER!==y (
 )
 
 :: This is where I get off.
-echo Wrapper: Offline has been shut down.
+echo Vyond Legacy Offline has been shut down.
 if !FUCKOFF!==y ( echo You're a good listener. )
 echo This window will now close.
 if !INCLUDEDCHROMIUM!==y (
 	echo You can close the web browser now.
 )
-echo Open start_wrapper.bat again to start W:O again.
+echo Open start_vyond.bat again to start VLO again.
 if !DRYRUN!==y ( echo Go wet your run next time. ) 
 pause & exit
 
 :exitwithstyle
-title Wrapper: Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Shutting down... WITH STYLE]
-echo SHUTTING DOWN THE WRAPPER OFFLINE
+title Vyond Legacy Offline v!WRAPPER_VER! ^(build !WRAPPER_BLD!^) [Shutting down... WITH STYLE]
+echo SHUTTING DOWN THE VYOND LEGACY OFFLINE
 PING -n 3 127.0.0.1>nul
 color 9b
 echo BEWEWEWEWWW PSSHHHH KSHHHHHHHHHHHHHH
@@ -1070,7 +1070,7 @@ goto grr
 
 :configcopy
 if not exist utilities ( md utilities )
-echo :: Wrapper: Offline Config>> utilities\config.bat
+echo :: Vyond Legacy Offline Config>> utilities\config.bat
 echo :: This file is modified by settings.bat. It is not organized, but comments for each setting have been added.>> utilities\config.bat
 echo :: You should be using settings.bat, and not touching this. Offline relies on this file remaining consistent, and it's easy to mess that up.>> utilities\config.bat
 echo:>> utilities\config.bat
