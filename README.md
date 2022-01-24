@@ -1,8 +1,8 @@
-# Wrapper: Offline
-Wrapper: Offline is a GoAnimate Server Emulator carrying on the torch of [VisualPlugin's GoAnimate Wrapper project](https://github.com/GoAnimate-Wrapper) after it's shutdown in 2020. Unlike the original project, Offline can not be shut down by Vyond. Why? It's because of our twist on the GoAnimate Wrapper formula! Everything is hosted and programmed to function locally, no internet access required, barring the initial download (and TTS at this time). This project is important for archival purposes, as the ability to use this legacy editor and themes would be far trickier without it. Besides the main feature of Offline, we have also added other additional features and improvements compared to the original GoAnimate Wrapper project, and there will be more to come, as Offline will continue to get additional updates in the future.
+# Vyond Legacy Offline
+Vyond Legacy Offline is the orginal vyond project witch is designed to bring back many things! this even prevents raids from happening witch in reality won't be called Offline. it's just there for some reason. Everything that functions is linked with this link: https://josephcrosmanplays532.github.io. In this stable version, the search all themes option will be avaible to use within the studio. Starters will be fully functional and so much more is expected to come!
 
 ## Running / Installation
-To start Offline on Windows, open start_wrapper.bat. It'll automate just about everything for you and, well, start Wrapper: Offline. On your first run, you will likely need to right-click it and click "Run as Administrator". This allows it to properly install what it needs to run. After your initial run, you shouldn't need to do that again, you can start it as normal.
+To start Offline on Windows, open start_vyond.bat. It'll automate just about everything for you and, well, start Vyond Legacy Offline. On your first run, you will likely need to right-click it and click "Run as Administrator". This allows it to properly install what it needs to run. After your initial run, you shouldn't need to do that again, you can start it as normal.
 
 If you want to import videos and characters from the original Wrapper or any other clones of it, open its folder and drag the "_SAVED" folder into Offline's "wrapper" folder. If you have already made any videos or characters, this will not work. Please only import on a new install with no saved characters or videos, or take the "_SAVED" folder in Offline out before dragging the old one in. If you want to import character IDs from the original LVM, you can paste `&original_asset_id=[ID HERE]` at the end of the link for the matching character creator.
 
@@ -16,7 +16,7 @@ This program relies on Flash, Node.js and http-server to work properly. SilentCM
 Most of this project is free/libre software[1] under the MIT license. You have the freedom to run, change, and share this as much as you want.
 This includes:
   - Files in the "wrapper" folder
-  - Batch files made for Wrapper: Offline
+  - Batch files made for Vyond Legacy Offline
   - Node.js
   - http-server
   - SilentCMD
@@ -44,21 +44,20 @@ Original Wrapper credits:
 No members of the original team are officially working on Offline, even if they have contributed. Some members of the original team have asked to not be given credit, and they have been removed.
 
 Project Lead will have (PL) on their name and developers will have (D) on their name, to show they are officially working on Wrapper: Offline. Everyone else has simply contributed something at some point, or left the development team.
-Wrapper: Offline credits:
-| Name             | Contribution                                           |
-| ---------------- | -------------------------------------------------------|
-| GoTest334 (PL)   | Current Project Lead                                   |
-| Benson (D)       | Wrapper: Offline                                       |
-| NathanSaturnBOI  | Logo                                                   |
-| Blukas/GoTube (D)| Import idea, Mega Comedy World 2                       |
-| VisualPlugin     | Text to speech voices                                  |
-| xomdjl_          | VFProxy, Text to speech voices                         |
-| creepyjokes2000  | Waveform fix, improved actions                         |
-| JoshAnimate      | Headgear fix                                           |
-| RegularSpark     | Fixing 1.2.3 to actually work, truncated themelist     |
-| KrisAnimate      | Chromium parameter                                     |
-| narutofan420     | W:O installer and updater                              |
-| PoleyMagik       | Client Modifications                                   |
+Vyond Legacy Offline credits:
+| Name                       | Contribution                                           |
+| -------------------------- | ------------------------------------------------------ |
+| Joseph Animate 2021 (PL)   | Current Project Lead                                   |
+| Fanimation36 (D)           | Vyond Legacy Offline                                   |
+| Vyond                      | Logo                                                   |
+| Blukas/GoTube (D)          | Import idea                                            |
+| VisualPlugin               | Text to speech voices                                  |
+| xomdjl_                    | VFProxy, Text to speech voices                         |
+| creepyjokes2000            | Waveform fix, improved actions                         |
+| JoshAnimate                | Headgear fix                                           |
+| RegularSpark               | truncated themelist                                    |
+| KrisAnimate                | Chromium parameter                                     |
+| PoleyMagik                 | Client Modifications                                   |
 
 These are unaffiliated people that they haven't directly done anything for the project (and probably don't even know it exists) but still deserve credit for their things. Kinda like a shoutout but in a project's readme. ***Please do not contact them about Wrapper: Offline.***
 | Name               | Contribution                     |
