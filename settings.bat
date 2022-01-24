@@ -1,6 +1,6 @@
 title Vyond Legacy Offline Settings Script
 :: Interactive config.bat changer
-:: Author: benson#0411
+:: Author: Fanimation36#1811
 :: License: MIT
 
 :: DON'T EDIT THIS FILE! If you need a text version of the settings like it used to be, edit utilities\config.bat. This file is now just an interface for changing that file.
