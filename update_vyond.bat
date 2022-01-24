@@ -1,7 +1,7 @@
-:: Wrapper: Offline Updater
-:: Author: octanuary#6596 (narutofan420)
+:: Vyond Legacy Offline Updater
+:: Author: Fanimation36#1811 (Fanimation36)
 :: License: MIT
-title Wrapper: Offline Updater [Initializing...]
+title Vyond Legacy Offline Updater [Initializing...]
 
 ::::::::::::::::::::
 :: Initialization ::
@@ -21,7 +21,7 @@ if not exist wrapper ( goto error_location )
 if not exist server ( goto error_location )
 goto noerror_location
 :error_location
-echo Doesn't seem like this script is in a Wrapper: Offline folder.
+echo Doesn't seem like this script is in a Vyond Legacy Offline folder.
 pause && exit
 :noerror_location
 
@@ -29,19 +29,19 @@ pause && exit
 :: Post-Initialization ::
 :::::::::::::::::::::::::
 
-title Wrapper: Offline Updater
+title Vyond Legacy Offline Updater
 
 if not exist .git ( goto nogit )
 :yesgit
-echo Wrapper: Offline Updater
-echo A project from VisualPlugin adapted by Benson and the Wrapper: Offline Team
+echo Vyond Legacy Offline Updater
+echo A project from Fanimation36 adapted by Joseph Animate 2021
 echo:
-echo Enter 1 to update Wrapper: Offline
+echo Enter 1 to update Vyond Legacy Offline
 echo Enter 0 to close the updater
 goto wrapperidle
 :nogit
-echo You have not downloaded Wrapper: Offline using the batch installer.
-echo Please download install_wrapper_offline.zip and run the batch file inside.
+echo You have not downloaded Vyond Legacy Offline using the batch installer.
+echo Please download install_vyond_legacy_offline.zip and run the batch file inside.
 pause & exit
 :wrapperidle
 echo:
@@ -61,7 +61,7 @@ pushd "%~dp0"
 echo Pulling repository from GitHub...
 git pull
 cls
-echo Wrapper: Offline has been updated^^!
+echo Vyond Legacy Offline has been updated^^!
 start "" "%~dp0"
 pause & exit
 
